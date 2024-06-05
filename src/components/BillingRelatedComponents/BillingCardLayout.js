@@ -1,6 +1,6 @@
 const BillingCardLayout = ({ cardName, isPrimary, cardProcessorImg, cardNumber, cardExpiry }) => {
   return (
-    <div className="border border-dashed rounded-xl flex justify-between p-6 items-center">
+    <div className="border border-dashed rounded-xl flex flex-col md:flex-row gap-8 md:gap-0 justify-between p-6 items-center">
       {/* Card Name its Mini Details */}
       <div className="flex flex-col">
         {/* Name and Primary indicator */}
@@ -12,10 +12,10 @@ const BillingCardLayout = ({ cardName, isPrimary, cardProcessorImg, cardNumber, 
           )}
         </div>
         {/* Card Network and its mini details */}
-        <div className="flex items-center">
+        <div className="flex items-start md:items-center flex-col md:flex-row gap-4 md:gap-0">
           {/* Card processor image */}
           <div className="mr-2">
-            <img src={cardProcessorImg} alt="Card Processor Image" />
+            <img src={cardProcessorImg} alt="Card Processor" />
           </div>
           {/* Card mini details */}
           <div>

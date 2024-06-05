@@ -1,14 +1,8 @@
 import Layout from "../components/Layout";
 import Usercard from "../components/UserCard";
+import { data } from '../sampleData/sampleData';
 
 export default function Overview() {
-  const data = [
-    { item: 'INV-256', productId: 'Joseph', dateAdded: '01/06/2024', price: 'AED 1,800', status: 'PAID', qty: '100' },
-    { item: 'INV-256', productId: 'Joseph', dateAdded: '01/06/2024', price: 'AED 1,800', status: 'PAID', qty: '100' },
-    { item: 'INV-256', productId: 'Joseph', dateAdded: '01/06/2024', price: 'AED 1,800', status: 'PAID', qty: '100' },
-    { item: 'INV-256', productId: 'Joseph', dateAdded: '01/06/2024', price: 'AED 1,800', status: 'PAID', qty: '100' },
-    { item: 'INV-256', productId: 'Joseph', dateAdded: '01/06/2024', price: 'AED 1,800', status: 'PAID', qty: '100' },
-  ];
 
   return (
     <Layout>
@@ -23,49 +17,49 @@ export default function Overview() {
           </div>
           {/* Table Details */}
           <div className="p-7">
-            <div className="flex justify-center">
-              <table className="min-w-full border-collapse">
-                <tbody>
+            <div>
+              <div className="min-w-full border-collapse">
+                <div>
                   {/* Full Name */}
-                  <tr className="flex flex-col md:flex-row mb-4 md:mb-0">
-                    <td className="pb-0 md:py-3 w-1/3 text-gray-400 font-medium"><p>Full Name</p></td>
-                    <td className="pt-0 md:py-3 w-2/3 font-medium"><p>Max Smith</p></td>
-                  </tr>
+                  <div className="flex flex-col md:flex-row mb-4 md:mb-0">
+                    <div className="pb-0 md:py-3 w-full md:w-1/3 text-gray-400 font-medium"><p>Full Name</p></div>
+                    <div className="pt-0 md:py-3 w-full md:w-2/3 font-medium"><p>Max Smith</p></div>
+                  </div>
                   {/* Company */}
-                  <tr className="flex flex-col md:flex-row mb-4 md:mb-0">
-                    <td className="pb-0 md:py-3 w-1/3 text-gray-400 font-medium"><p>Company</p></td>
-                    <td className="pt-0 md:py-3 w-2/3 font-medium"><p>Keenthemes</p></td>
-                  </tr>
+                  <div className="flex flex-col md:flex-row mb-4 md:mb-0">
+                    <div className="pb-0 md:py-3 w-full md:w-1/3 text-gray-400 font-medium"><p>Company</p></div>
+                    <div className="pt-0 md:py-3 w-full md:w-2/3 font-medium"><p>Keenthemes</p></div>
+                  </div>
                   {/* Contact Phone */}
-                  <tr className="flex flex-col md:flex-row mb-4 md:mb-0">
-                    <td className="pb-0 md:py-3 w-1/3 text-gray-400 font-medium"><p>Contact Phone</p></td>
-                    <td className="pt-0 md:py-3 w-2/3 font-medium flex items-center"><p>044 3276 454 935</p>
+                  <div className="flex flex-col md:flex-row mb-4 md:mb-0">
+                    <div className="pb-0 md:py-3 w-full md:w-1/3 text-gray-400 font-medium"><p>Contact Phone</p></div>
+                    <div className="pt-0 md:py-3 w-full md:w-2/3 font-medium flex items-center"><p>044 3276 454 935</p>
                       {/* is Verified */}
                       <span className="ml-2 bg-green-400 py-1 px-2 text-white font-medium rounded-xl text-xs">Verified</span>
-                    </td>
-                  </tr>
+                    </div>
+                  </div>
                   {/* Company Site */}
-                  <tr className="flex flex-col md:flex-row mb-4 md:mb-0">
-                    <td className="pb-0 md:py-3 w-1/3 text-gray-400 font-medium"><p>Company Site</p></td>
-                    <td className="pt-0 md:py-3 w-2/3 font-medium"><p>keenthemes.com</p></td>
-                  </tr>
-                  {/* Country */}
-                  <tr className="flex flex-col md:flex-row mb-4 md:mb-0">
-                    <td className="pb-0 md:py-3 w-1/3 text-gray-400 font-medium"><p>Country</p></td>
-                    <td className="pt-0 md:py-3 w-2/3 font-medium"><p>Germany</p></td>
-                  </tr>
+                  <div className="flex flex-col md:flex-row mb-4 md:mb-0">
+                    <div className="pb-0 md:py-3 w-full md:w-1/3 text-gray-400 font-medium"><p>Company Site</p></div>
+                    <div className="pt-0 md:py-3 w-full md:w-2/3 font-medium"><p>keenthemes.com</p></div>
+                  </div>
+                  {/* Coundivy */}
+                  <div className="flex flex-col md:flex-row mb-4 md:mb-0">
+                    <div className="pb-0 md:py-3 w-full md:w-1/3 text-gray-400 font-medium"><p>Coundivy</p></div>
+                    <div className="pt-0 md:py-3 w-full md:w-2/3 font-medium"><p>Germany</p></div>
+                  </div>
                   {/* Communication */}
-                  <tr className="flex flex-col md:flex-row mb-4 md:mb-0">
-                    <td className="mpb-0 d:py-3 w-1/3 text-gray-400 font-medium"><p>Communication</p></td>
-                    <td className="pt-0 md:py-3 w-2/3 font-medium"><p>Email, Phone</p></td>
-                  </tr>
+                  <div className="flex flex-col md:flex-row mb-4 md:mb-0">
+                    <div className="mpb-0 d:py-3 w-full md:w-1/3 text-gray-400 font-medium"><p>Communication</p></div>
+                    <div className="pt-0 md:py-3 w-full md:w-2/3 font-medium"><p>Email, Phone</p></div>
+                  </div>
                   {/* Allow Changes */}
-                  <tr className="flex flex-col md:flex-row mb-4 md:mb-0">
-                    <td className="pb-0 md:py-3 w-1/3 text-gray-400 font-medium"><p>Allow Changes</p></td>
-                    <td className="pt-0 md:py-3 w-2/3 font-medium"><p>Yes</p></td>
-                  </tr>
-                </tbody>
-              </table>
+                  <div className="flex flex-col md:flex-row mb-4 md:mb-0">
+                    <div className="pb-0 md:py-3 w-full md:w-1/3 text-gray-400 font-medium"><p>Allow Changes</p></div>
+                    <div className="pt-0 md:py-3 w-full md:w-2/3 font-medium"><p>Yes</p></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -156,8 +150,8 @@ export default function Overview() {
           </div>
           {/* Table */}
           <div className='py-7'>
-            <div className="flex justify-center overflow-x-auto">
-              <table className="min-w-full">
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
                 <thead>
                   <tr className="text-gray-500 uppercase">
                     <th className="px-4 py-2 border-b border-dashed font-bold text-right">Date Added</th>

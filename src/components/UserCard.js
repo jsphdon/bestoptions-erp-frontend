@@ -34,13 +34,13 @@ export default function Usercard() {
                 <div className="flex space-x-0 sm:space-x-4 flex-col sm:flex-row space-y-1 sm:space-y-0">
                   {/* Place of Origin */}
                   <div className="hover:text-blue-500 text-gray-400 flex items-center">
-                    <img src="https://img.icons8.com/material-rounded/24/user-male-circle.png" alt="user-male-circle" className="h-4 w-4 mr-1 text-gray-400" />
+                    {/* <img src="https://img.icons8.com/material-rounded/24/user-male-circle.png" alt="user-male-circle" className="h-4 w-4 mr-1 text-gray-400" /> */}
                     <p>Abu Dhabi, UAE</p>
                   </div>
                   {/* Address */}
-                  <div>
+                  {/* <div>
                     <p className="text-gray-400">SF, Bay Area</p>
-                  </div>
+                  </div> */}
                   {/* Email */}
                   <div>
                     <p className="text-gray-400">george@best.com</p>
@@ -52,7 +52,7 @@ export default function Usercard() {
                 {/* View Button */}
                 <button className="rounded-md py-2 px-4 hover:bg-gray-300 bg-gray-100 text-gray-600 text-center font-bold">View</button>
                 {/* Edit Profile Button */}
-                <button className="rounded-md py-2 px-4 hover:bg-blue-700 bg-blue-600 text-white text-center mx-2 md:mx-1 font-bold">Edit Profile</button>
+                <Link to="/full-profile" className="rounded-md py-2 px-4 hover:bg-blue-700 bg-blue-600 text-white text-center mx-2 md:mx-1 font-bold">Edit Profile</Link>
                 {/* More Button */}
                 <button className="flex space-x-1 justify-center items-center rounded-md py-2 px-4 hover:bg-gray-300 bg-gray-100 text-gray-600 text-center font-bold">
                   <div className="h-1 w-1 bg-gray-600 rounded-full"></div>
@@ -63,7 +63,7 @@ export default function Usercard() {
             </div>
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between w-full mt-1 md:mt-5">
               {/* Cards */}
-              <div className="flex flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-4 grow flex-wrap">
+              <div className="flex flex-row gap-4 grow flex-wrap">
                 {/* Card 1 */}
                 <div className="rounded-md flex border flex-col p-2 min-w-[125px] border-dashed">
                   <div className="flex">
@@ -110,18 +110,18 @@ export default function Usercard() {
         {/* TABS */}
         <div className="mt-4 px-7">
           <nav>
-            <ul className='flex space-x-5'>
-              <li className={location.pathname === "/overview" ? 'text-blue-500 pb-4 border-b-2 border-blue-500' : 'text-gray-400'}>
-                <Link to="/overview" className='font-bold pb-4'>Overview</Link>
+            <ul className='flex gap-5 overflow-y-auto'>
+              <li className={location.pathname === "/overview" ? 'text-blue-500 pb-2 sm:pb-4 border-b-2 border-blue-500' : 'text-gray-400'}>
+                <Link to="/overview" className='font-bold text-sm md:text-base'>Overview</Link>
               </li>
-              <li className={location.pathname === "/full-profile" ? 'text-blue-500 border-b-2 border-blue-500 pb-4' : 'text-gray-400'}>
-                <Link to="/full-profile" className='font-bold pb-4'>Full Profile</Link>
+              <li className={location.pathname === "/full-profile" ? 'text-blue-500 border-b-2 border-blue-500 pb-2 sm:pb-4' : 'text-gray-400'}>
+                <Link to="/full-profile" className='font-bold text-sm md:text-base'>Full Profile</Link>
               </li>
-              <li className={location.pathname === "/logs" ? 'text-blue-500 border-b-2 border-blue-500 pb-4' : 'text-gray-400'}>
-                <Link to="/logs" className='font-bold pb-4'>Logs</Link>
+              <li className={location.pathname === "/logs" ? 'text-blue-500 border-b-2 border-blue-500 pb-2 sm:pb-4' : 'text-gray-400'}>
+                <Link to="/logs" className='font-bold text-sm md:text-base'>Logs</Link>
               </li>
-              <li className={location.pathname === "/billings" ? 'text-blue-500 border-b-2 border-blue-500 pb-4' : 'text-gray-400'}>
-                <Link to="/billings" className='font-bold pb-4'>Billings</Link>
+              <li className={location.pathname === "/billings" ? 'text-blue-500 border-b-2 border-blue-500 pb-2 sm:pb-4' : 'text-gray-400'}>
+                <Link to="/billings" className='font-bold text-sm md:text-base'>Billings</Link>
               </li>
             </ul>
           </nav>

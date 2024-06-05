@@ -2,7 +2,7 @@ const BillingAddressCardLayout = ({ addressNumber, isPrimary, aptBlockAvenue, ci
   const addressNum = `Address ${addressNumber}`;
 
   return (
-    <div className="border border-dashed rounded-xl flex justify-between p-6 items-center">
+    <div className="border border-dashed rounded-xl flex flex-col md:flex-row gap-4 md:gap-0 justify-between p-6 items-center">
       {/* Card Name its Mini Details */}
       <div className="flex flex-col">
         {/* Name and Primary indicator */}

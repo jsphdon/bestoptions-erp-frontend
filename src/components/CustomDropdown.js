@@ -11,11 +11,12 @@ const CustomDropdownStyled = styled(Select)(({ theme }) => ({
   },
 }));
 
-const CustomDropdown = ({ value, onChange, options, placeholder }) => {
+const CustomDropdown = ({ name, value, onChange, options, placeholder, disabled }) => {
   return (
     <Box className="w-full">
-      <FormControl variant="outlined" className="w-full bg-gray-100 py-3 px-4 rounded-lg">
+      <FormControl variant="outlined" className="w-full bg-gray-100 py-3 px-4 rounded-lg" disabled={disabled}>
         <CustomDropdownStyled
+          name={name}
           value={value}
           onChange={onChange}
           displayEmpty
