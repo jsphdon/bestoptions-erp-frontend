@@ -154,17 +154,17 @@ export default function Overview() {
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="text-gray-500 uppercase">
-                    <th className="px-4 py-2 border-b border-dashed font-bold text-right">Date Added</th>
+                    <th className="px-4 py-2 border-b border-dashed font-bold text-left">Date Added</th>
                     <th className="px-4 py-2 border-b border-dashed font-bold text-left">Invoice #</th>
                     <th className="px-4 py-2 border-b border-dashed font-bold text-center">Sales Person</th>
-                    <th className="px-4 py-2 border-b border-dashed font-bold text-right">Amount</th>
+                    <th className="px-4 py-2 border-b border-dashed font-bold text-center">Amount</th>
                     <th className="px-4 py-2 border-b border-dashed font-bold text-right">Status</th>
                   </tr>
                 </thead>
                 <tbody>
                   {data.map((row, index) => (
                     <tr key={index}>
-                      <td className="px-4 py-2 text-gray-500 font-bold text-right border-b border-dashed">{row.dateAdded}</td>
+                      <td className="px-4 py-2 text-gray-500 font-bold text-left border-b border-dashed">{row.dateAdded}</td>
                       <td className="px-4 py-2 text-black font-bold text-left border-b border-dashed">{row.item}</td>
                       <td className="px-4 py-2 text-gray-500 font-bold text-center border-b border-dashed">{row.productId}</td>
                       <td className="px-4 py-2 text-gray-500 font-bold text-right border-b border-dashed">{row.price}</td>

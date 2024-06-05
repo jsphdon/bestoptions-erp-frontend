@@ -25,7 +25,7 @@ function ModalAddCard({ handleClose }) {
       {/* Header */}
       <div className='p-7 flex justify-between items-center border-b border-gray-200'>
         <h1 className='text-lg font-bold'>Add New Card</h1>
-        <button className="rounded-full py-1 px-3 bg-red-500 text-white" onClick={handleClose}>X</button>
+        <button className="text-black" onClick={handleClose}>X</button>
       </div>
       {/* Content */}
       <div className='mx-7 sm:mx-10 my-4 sm:my-7 px-5 py-3 max-h-96 md:max-h-full overflow-y-auto'>

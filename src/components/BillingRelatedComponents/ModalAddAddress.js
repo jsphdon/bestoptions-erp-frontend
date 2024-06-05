@@ -18,7 +18,7 @@ function ModalAddAddress({ handleClose }) {
       {/* Header */}
       <div className='rounded-t-xl p-7 flex justify-between items-center border-b border-gray-200 sticky top-0 bg-white z-10'>
         <h1 className='text-lg font-bold'>Add New Address</h1>
-        <button className="rounded-full py-1 px-3 bg-red-500 text-white" onClick={handleClose}>X</button>
+        <button className="text-black" onClick={handleClose}>X</button>
       </div>
       {/* Form Content */}
       <div className='mx-7 md:mx-10 my-4 md:my-7 px-5 py-3 max-h-96 overflow-y-auto'>

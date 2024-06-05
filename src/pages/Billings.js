@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Fade } from '@mui/material';
+import { Modal } from '@mui/material';
 import AllTimeTableComponent from "../components/BillingRelatedComponents/AllTimeTableComponent";
 import MonthTableComponent from "../components/BillingRelatedComponents/MonthTableComponent";
 import YearTableComponent from "../components/BillingRelatedComponents/YearTableComponent";
