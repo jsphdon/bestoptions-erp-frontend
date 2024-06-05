@@ -15,3 +15,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.css-dmmspl-MuiFormGroup-root{
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: row !important;
+}

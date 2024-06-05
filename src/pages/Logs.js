@@ -1,3 +1,6 @@
+import Layout from "../components/Layout";
+import Usercard from "../components/UserCard";
+
 export default function Logs() {
   const data = [
     { location: 'location 1', status: 'OK', device: 'Chrome - Windows', ip: '236.125.56.78', time: '2 mins ago' },
@@ -8,7 +11,8 @@ export default function Logs() {
   ];
 
   return (
-    <div>
+    <Layout>
+      <Usercard />
       {/* Profile Edit Section */}
       <div className="flex flex-col border shadow-sm rounded-lg w-full mt-8">
         <div>
@@ -50,6 +54,6 @@ export default function Logs() {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }

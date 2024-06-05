@@ -1,3 +1,6 @@
+import Layout from "../components/Layout";
+import Usercard from "../components/UserCard";
+
 export default function Overview() {
   const data = [
     { item: 'INV-256', productId: 'Joseph', dateAdded: '01/06/2024', price: 'AED 1,800', status: 'PAID', qty: '100' },
@@ -8,7 +11,8 @@ export default function Overview() {
   ];
 
   return (
-    <div>
+    <Layout>
+      <Usercard />
       {/* Profile Details Section */}
       <div className="flex flex-col border shadow-sm rounded-lg w-full mt-8">
         <div>
@@ -179,7 +183,7 @@ export default function Overview() {
           </div>
         </div>
       </div>
-    </div >
+    </Layout >
 
   )
 }

@@ -1,27 +1,31 @@
-import Select from 'react-select'
+import React, { useState } from 'react'
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Switch from '@mui/material/Switch';
+import CustomDropdown from '../components/CustomDropdown';
+import Layout from '../components/Layout';
+import Usercard from '../components/UserCard';
 
 export default function FullProfile() {
 
   const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
-  const country = [
-    { value: 'uganda', label: 'Uganda' },
-    { value: 'uae', label: 'United Arab Emirates' },
-    { value: 'philippines', label: 'Philippines' }
-  ]
+  const [country, setCountry] = useState('');
 
-  const currency = [
+  const handleChange = (event) => {
+    setCountry(event.target.value);
+  };
+
+  const countries = [
     { value: 'uganda', label: 'Uganda' },
     { value: 'uae', label: 'United Arab Emirates' },
-    { value: 'philippines', label: 'Philippines' }
-  ]
+    { value: 'philippines', label: 'Philippines' },
+  ];
 
   return (
-    <div>
+    <Layout>
+      <Usercard />
       {/* Profile Edit Section */}
       <div className="flex flex-col border shadow-sm rounded-lg w-full mt-8">
         <div>
@@ -85,37 +89,39 @@ export default function FullProfile() {
                   <tr className="flex flex-col md:flex-row mb-4 md:mb-0">
                     <td className="pb-0 md:py-3 w-1/3 text-gray-600 font-medium flex items-center"><p>Country</p><span className="text-red-500 ml-1">*</span></td>
                     <td className="pt-0 md:py-3 w-full md:w-2/3 font-medium flex items-center">
-                      <Select className='w-full rounded-xl' options={country} />
+                      {/* <Select className='w-full rounded-xl' options={country} /> */}
+                      <CustomDropdown value={country} onChange={handleChange} options={countries} placeholder="Select Country" />
                     </td>
                   </tr>
                   {/* Language */}
                   <tr className="flex flex-col md:flex-row mb-4 md:mb-0">
                     <td className="pb-0 md:py-3 w-1/3 text-gray-600 font-medium flex items-center"><p>Language</p><span className="text-red-500 ml-1">*</span></td>
-                    <td className="pt-0 md:py-3 w-full md:w-2/3 font-medium flex items-center">
-                      <Select className='w-full rounded-xl' options={country} />
+                    <td className="pt-0 md:py-3 w-full md:w-2/3 font-medium flex items-start flex-col ">
+                      <CustomDropdown value={country} onChange={handleChange} options={countries} placeholder="Select Language" />
+                      <p className='text-xs text-gray-400 mt-1'>Please select a preferred language, including date, time, and number formatting.</p>
                     </td>
                   </tr>
                   {/* Timezone */}
                   <tr className="flex flex-col md:flex-row mb-4 md:mb-0">
                     <td className="pb-0 md:py-3 w-1/3 text-gray-600 font-medium flex items-center"><p>Timezone</p><span className="text-red-500 ml-1">*</span></td>
                     <td className="pt-0 md:py-3 w-full md:w-2/3 font-medium flex items-center">
-                      <Select className='w-full rounded-xl' options={country} />
+                      <CustomDropdown value={country} onChange={handleChange} options={countries} placeholder="Select a timezone.." />
                     </td>
                   </tr>
                   {/* Currency */}
                   <tr className="flex flex-col md:flex-row mb-4 md:mb-0">
                     <td className="pb-0 md:py-3 w-1/3 text-gray-600 font-medium flex items-center"><p>Currency</p><span className="text-red-500 ml-1">*</span></td>
                     <td className="pt-0 md:py-3 w-full md:w-2/3 font-medium flex items-center">
-                      <Select className='w-full rounded-xl' options={country} />
+                      <CustomDropdown value={country} onChange={handleChange} options={countries} placeholder="Select a currency" />
                     </td>
                   </tr>
                   {/* Communication */}
                   <tr className="flex flex-col md:flex-row mb-4 md:mb-0">
                     <td className="mpb-0 d:py-3 w-1/3 text-gray-600 font-medium flex items-center"><p>Communication</p><span className="text-red-500 ml-1">*</span></td>
                     <td className="pt-0 md:py-3 w-full md:w-2/3 font-medium">
-                      <FormGroup className='flex items-center'>
-                        <FormControlLabel control={<Checkbox />} label="Email" />
-                        <FormControlLabel control={<Checkbox />} label="Phone" />
+                      <FormGroup className="flex flex-col md:flex-row items-start md:items-center">
+                        <FormControlLabel control={<Checkbox />} label="Email" className="mr-4" />
+                        <FormControlLabel control={<Checkbox />} label="Phone" className="mr-4" />
                       </FormGroup>
                     </td>
                   </tr>
@@ -169,6 +175,6 @@ export default function FullProfile() {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }

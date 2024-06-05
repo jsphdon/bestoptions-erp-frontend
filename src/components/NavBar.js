@@ -6,7 +6,7 @@ function Navbar() {
     <nav>
       <ul className='container mx-auto flex items-center justify-evenly my-5'>
         <li>
-          <Link to="/single-page" className='font-bold'>Single Page</Link>
+          <Link to="/overview" className='font-bold'>User Profile</Link>
         </li>
         <li>
           <Link to="/dashboard" className='font-bold'>Dashboard</Link>
