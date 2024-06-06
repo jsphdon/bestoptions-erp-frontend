@@ -150,6 +150,7 @@ export default function Overview() {
             </div>
           </div>
         </div>
+
         {/* Latest Transactions div */}
         <div className="h-full flex flex-col p-7 border shadow-sm rounded-lg w-full text-center ml-0 mt-4 lg:ml-4 lg:mt-0 basis-8/12">
           <div className="h-full flex justify-between items-start md:items-center flex-col md:flex-row ">

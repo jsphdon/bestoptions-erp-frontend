@@ -118,3 +118,12 @@ export const categories = [
   { value: "categoryA", label: 'Category A' },
   { value: "categoryB", label: 'Category B' },
 ];
+
+export const dashboardDataFirst = [
+  { id: '#XGY-346', created: '1 hour ago', customer: 'Joseph', total: 'AED 1,800', profit: 'AED 400', status: 'Pending' },
+  { id: '#XGY-347', created: '2 hours ago', customer: 'Samantha', total: 'AED 2,400', profit: 'AED 600', status: 'Completed' },
+  { id: '#XGY-348', created: '3 hours ago', customer: 'Michael', total: 'AED 3,000', profit: 'AED 700', status: 'Shipped' },
+  { id: '#XGY-349', created: '4 hours ago', customer: 'Isabella', total: 'AED 1,200', profit: 'AED 300', status: 'Pending' },
+  { id: '#XGY-350', created: '5 hours ago', customer: 'William', total: 'AED 2,800', profit: 'AED 500', status: 'Completed' },
+  { id: '#XGY-351', created: '6 hours ago', customer: 'Olivia', total: 'AED 1,600', profit: 'AED 400', status: 'Shipped' }
+];
