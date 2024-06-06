@@ -2,10 +2,10 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar';
-import Overview from './pages/Overview';
-import Billings from './pages/Billings';
-import FullProfile from './pages/FullProfile';
-import Logs from './pages/Logs';
+import Overview from './pages/UserProfile/Overview';
+import FullProfile from './pages/UserProfile/FullProfile';
+import Logs from './pages/UserProfile/Logs';
+import Billings from './pages/UserProfile/Billings';
 import Dashboard from './pages/Dashboard';
 
 function App() {

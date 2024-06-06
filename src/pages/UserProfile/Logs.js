@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import CustomDropdown from "../components/CustomDropdown";
-import Layout from "../components/Layout";
-import Usercard from "../components/UserCard";
-import { logsData, hours } from "../sampleData/sampleData";
+import CustomDropdown from "../../components/CustomDropdown";
+import Layout from "../../components/Layout";
+import Usercard from "../../components/UserCard";
+import { logsData, hours } from "../../sampleData/sampleData";
 
 export default function Logs() {
 

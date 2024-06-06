@@ -1,8 +1,29 @@
-import Layout from "../components/Layout";
-import Usercard from "../components/UserCard";
-import { data } from '../sampleData/sampleData';
+import React, { useState } from 'react';
+import Layout from "../../components/Layout";
+import Usercard from "../../components/UserCard";
+import CustomDropdown from '../../components/CustomDropdown';
+import { data, transactStatus, categories } from '../../sampleData/sampleData';
 
 export default function Overview() {
+
+  const [status, setStatus] = useState('');
+  const [category, setCategory] = useState('');
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    // Handle changes based on the name of the input/select element
+    switch (name) {
+      case 'status':
+        setStatus(value);
+        break;
+      case 'category':
+        setCategory(value);
+        break;
+      default:
+      // Default case
+    }
+  };
 
   return (
     <Layout>
@@ -106,7 +127,7 @@ export default function Overview() {
                 <h1 className="font-bold text-lg">Latest Items</h1>
                 <p className="text-gray-400 font-medium text-sm">342 Items Sold Last Month</p>
               </div>
-              <button className="rounded-md py-2 px-3 hover:bg-gray-300 bg-gray-100 text-center text-sm font-normal">View More</button>
+              <button className="rounded-md py-2 px-3 hover:bg-gray-300 bg-gray-100 text-center text-sm font-semibold">View More</button>
             </div>
             <div className="flex justify-center mt-8">
               <table className="min-w-full overflow-x-auto">
@@ -136,16 +157,16 @@ export default function Overview() {
               <h1 className="font-bold text-lg">Latest Transactions</h1>
               <p className="text-gray-400 font-medium text-md">Total Sales 30,000 AED</p>
             </div>
-            <div className='flex flex-col md:flex-row space-x-0 md:space-x-2'>
+            <div className='flex flex-col md:flex-row gap-2 mt-3 md:mt-0'>
               <div className='flex items-center justify-between'>
-                <h1 className='py-2 pl-0 md:pl-3 text-gray-600 font-medium'>Category</h1>
-                <button className="py-2 px-3 text-sm font-normal">Show All</button>
+                <h1 className='py-2 px-0 pr-3 md:px-3 text-gray-600 font-medium text-sm'>Category</h1>
+                <CustomDropdown name="category" value={category} onChange={handleChange} options={categories} placeholder="Select" />
               </div>
               <div className='flex items-center justify-between'>
-                <h1 className='py-2 pl-0 md:pl-3 text-gray-600 font-medium'>Status</h1>
-                <button className="py-2 px-3 text-sm font-normal">Show All</button>
+                <h1 className='py-2 px-0 pr-3 md:px-3 text-gray-600 font-medium text-sm'>Status</h1>
+                <CustomDropdown name="status" value={status} onChange={handleChange} options={transactStatus} placeholder="Select" />
               </div>
-              <button className="rounded-md py-2 px-3 hover:bg-gray-300 bg-gray-100 text-center text-sm font-normal mt-1 md:mt-0">View All</button>
+              <button className="rounded-md py-2 px-3 hover:bg-gray-300 bg-gray-100 text-center text-sm font-semibold mt-1 md:mt-0">View All</button>
             </div>
           </div>
           {/* Table */}
@@ -167,7 +188,7 @@ export default function Overview() {
                       <td className="px-4 py-2 text-gray-500 font-bold text-left border-b border-dashed">{row.dateAdded}</td>
                       <td className="px-4 py-2 text-black font-bold text-left border-b border-dashed">{row.item}</td>
                       <td className="px-4 py-2 text-gray-500 font-bold text-center border-b border-dashed">{row.productId}</td>
-                      <td className="px-4 py-2 text-gray-500 font-bold text-right border-b border-dashed">{row.price}</td>
+                      <td className="px-4 py-2 text-gray-500 font-bold text-center border-b border-dashed">{row.price}</td>
                       <td className="px-4 py-2 text-gray-500 font-bold text-right border-b border-dashed">{row.status}</td>
                     </tr>
                   ))}

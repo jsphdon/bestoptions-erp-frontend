@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Modal } from '@mui/material';
-import AllTimeTableComponent from "../components/BillingRelatedComponents/AllTimeTableComponent";
-import MonthTableComponent from "../components/BillingRelatedComponents/MonthTableComponent";
-import YearTableComponent from "../components/BillingRelatedComponents/YearTableComponent";
-import BillingAddressCardLayout from "../components/BillingRelatedComponents/BillingAddressCardLayout";
-import BillingCardLayout from "../components/BillingRelatedComponents/BillingCardLayout";
-import Layout from '../components/Layout';
-import Usercard from '../components/UserCard';
-import ModalAddCard from '../components/BillingRelatedComponents/ModalAddCard';
-import ModalAddAddress from '../components/BillingRelatedComponents/ModalAddAddress';
+import AllTimeTableComponent from "../../components/BillingComponents/AllTimeTableComponent";
+import MonthTableComponent from "../../components/BillingComponents/MonthTableComponent";
+import YearTableComponent from "../../components/BillingComponents/YearTableComponent";
+import BillingAddressCardLayout from "../../components/BillingComponents/BillingAddressCardLayout";
+import BillingCardLayout from "../../components/BillingComponents/BillingCardLayout";
+import Layout from '../../components/Layout';
+import Usercard from '../../components/UserCard';
+import ModalAddCard from '../../components/BillingComponents/ModalAddCard';
+import ModalAddAddress from '../../components/BillingComponents/ModalAddAddress';
 import { Link } from 'react-router-dom';
-import { monthData, yearData, allTimeData } from '../sampleData/sampleData';
+import { monthData, yearData, allTimeData } from '../../sampleData/sampleData';
 
 export default function Billings() {
 

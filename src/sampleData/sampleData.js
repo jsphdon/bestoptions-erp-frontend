@@ -107,3 +107,14 @@ export const hours = [
   { value: 12, label: '12 Hours' },
   { value: 24, label: '24 Hours' },
 ];
+
+export const transactStatus = [
+  { value: "paid", label: 'Paid' },
+  { value: "unpaid", label: 'Unpaid' },
+  { value: "pending", label: 'Pending' },
+];
+
+export const categories = [
+  { value: "categoryA", label: 'Category A' },
+  { value: "categoryB", label: 'Category B' },
+];

@@ -34,7 +34,7 @@ function ModalAddCard({ handleClose }) {
           <div className='flex flex-col'>
             <label htmlFor="card_name" className='flex text-gray-700 mb-2'>Name on Card <span className='text-red-600'>*</span></label>
             {/* Input */}
-            <input type="text" className="w-full bg-gray-100 p-4 rounded-lg" placeholder="Max Doe" name="card_name" />
+            <input type="text" className="w-full bg-gray-100 p-4 rounded-lg" placeholder="Max Doe" name="card_name" required />
           </div>
           {/* Card Number */}
           <div className='flex flex-col mt-5'>
@@ -48,11 +48,12 @@ function ModalAddCard({ handleClose }) {
                 className="w-full bg-gray-100 p-4 pr-26 rounded-lg"
                 placeholder="1234 5678 9101 1121"
                 name="card_number"
+                required
               />
               <div className='absolute right-3 top-1/2 transform -translate-y-1/2 flex space-x-3'>
-                <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/svg/card-logos/visa.svg" alt="Visa Logo" className='w-8 h-8' />
-                <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/svg/card-logos/mastercard.svg" alt="Mastercard Logo" className='w-8 h-8' />
-                <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/svg/card-logos/american-express.svg" alt="American Express Logo" className='w-8 h-8' />
+                <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/svg/card-logos/visa.svg" alt="Visa Logo" className='w-10 h-10' />
+                <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/svg/card-logos/mastercard.svg" alt="Mastercard Logo" className='w-10 h-10' />
+                <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/svg/card-logos/american-express.svg" alt="American Express Logo" className='w-10 h-10' />
               </div>
             </div>
           </div>
@@ -82,6 +83,7 @@ function ModalAddCard({ handleClose }) {
                   name="card_number"
                   min="5"
                   max="5"
+                  required
                 />
                 <div className='absolute right-3 top-1/2 transform -translate-y-1/2 flex space-x-3'>
                   {/* <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/svg/card-logos/visa.svg" alt="Visa Logo" className='w-8 h-8' /> */}

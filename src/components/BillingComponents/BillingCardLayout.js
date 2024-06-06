@@ -32,8 +32,8 @@ const BillingCardLayout = ({ cardName, isPrimary, cardProcessorImg, cardNumber, 
       </div>
       {/* Card Buttons Delete and Edit */}
       <div className="flex space-x-3 h-fit">
-        <button className="rounded-md py-2 px-3 hover:bg-gray-300 bg-gray-100 text-center text-sm">Delete</button>
-        <button className="rounded-md py-2 px-3 hover:bg-gray-300 bg-gray-100 text-center text-sm">Edit</button>
+        <button className="rounded-md py-2 px-3 hover:bg-red-400 bg-red-200 text-center text-sm font-semibold">Delete</button>
+        <button className="rounded-md py-2 px-3 hover:bg-gray-300 bg-gray-100 text-center text-sm font-semibold">Edit</button>
       </div>
     </div>
   )

@@ -3,10 +3,10 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Switch from '@mui/material/Switch';
-import CustomDropdown from '../components/CustomDropdown';
-import Layout from '../components/Layout';
-import Usercard from '../components/UserCard';
-import { countries, timezones, currencies, languages } from '../sampleData/sampleData';
+import CustomDropdown from '../../components/CustomDropdown';
+import Layout from '../../components/Layout';
+import Usercard from '../../components/UserCard';
+import { countries, timezones, currencies, languages } from '../../sampleData/sampleData';
 
 export default function FullProfile() {
 
