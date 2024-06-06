@@ -1,5 +1,9 @@
 // sampleData.js
 
+import TabOneContent from "../components/DashboardTabContents/TabOneContent";
+import TabTwoContent from "../components/DashboardTabContents/TabTwoContent";
+import TabThreeContent from "../components/DashboardTabContents/TabThreeContent";
+
 export const monthData = [
   { date: '30/10/2024', description: 'Invoice for October 2024', amount: 'AED 1,800', invoice: 'PDF', view: 'View' },
   { date: '31/11/2024', description: 'Invoice for November 2024', amount: 'AED 800', invoice: 'PDF', view: 'View' },
@@ -126,4 +130,11 @@ export const dashboardDataFirst = [
   { id: '#XGY-349', created: '4 hours ago', customer: 'Isabella', total: 'AED 1,200', profit: 'AED 300', status: 'Pending' },
   { id: '#XGY-350', created: '5 hours ago', customer: 'William', total: 'AED 2,800', profit: 'AED 500', status: 'Completed' },
   { id: '#XGY-351', created: '6 hours ago', customer: 'Olivia', total: 'AED 1,600', profit: 'AED 400', status: 'Shipped' }
+];
+
+export const tabContent = [
+  { title: <div className="text-center font-semibold">VISA<br />30 Days</div>, content: <TabOneContent />, className: "tabs" },
+  { title: <div className="text-center font-semibold">VISA<br />60 Days</div>, content: <TabTwoContent />, className: "tabs" },
+  { title: <div className="text-center font-semibold">VISA<br />90 Days</div>, content: <TabThreeContent />, className: "tabs" }
+
 ];

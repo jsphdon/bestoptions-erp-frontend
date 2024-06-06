@@ -21,3 +21,17 @@ code {
   align-items: center !important;
   flex-direction: row !important;
 }
+
+
+.tabs{
+  display: flex;
+  flex-direction: column;
+  border: 1px;
+  border-style: dashed;
+  padding: 13px;
+  border-color: #DBDFE9;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import Layout from '../components/Layout';
 import SummaryCard from '../components/DashboardComponents/SummaryCard';
-import { dashboardDataFirst, data, transactStatus, categories } from '../sampleData/sampleData';
+import { dashboardDataFirst, data, transactStatus, categories, tabContent } from '../sampleData/sampleData';
 import CustomDropdown from '../components/CustomDropdown';
+import Tabs from "../components/Tabs";
+import TabContent from "../components/TabContent";
+
 
 export default function Dashboard() {
 
   const [status, setStatus] = useState('');
   const [category, setCategory] = useState('');
+  const [activeTab, setActiveTab] = useState(0);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -29,6 +33,7 @@ export default function Dashboard() {
     <Layout>
       {/* First Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full">
+
         {/* Summary (4 cards) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           {/* Expected Earnings */}
@@ -41,7 +46,7 @@ export default function Dashboard() {
           <SummaryCard amount="20" description="New Customers This Month" percentage="2.2" />
         </div>
 
-        {/* Sales this Month */}
+        {/* Sales this Month Card */}
         <div className="rounded-lg shadow-sm flex flex-col py-4 px-7 border-slate-100 border">
           {/* Heading */}
           <div className="flex justify-between items-center mb-12">
@@ -69,10 +74,10 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Recent Orders */}
-        <div className="rounded-lg shadow-sm flex flex-col py-4 px-7 border-slate-100 border">
+        {/* Recent Orders Card */}
+        <div className="rounded-lg shadow-sm flex flex-col py-4 px-7 border-slate-100 border min-h-[586px]">
           {/* Heading */}
-          <div className="flex justify-between items-center mb-12">
+          <div className="flex justify-between items-center mb-6">
             <h1 className="text-lg font-semibold">Recent Orders</h1>
             {/* More Button */}
             <button className="flex space-x-1 justify-center items-center rounded-md py-3 px-2 hover:bg-gray-300 bg-gray-100 text-gray-600 text-center font-bold">
@@ -81,12 +86,16 @@ export default function Dashboard() {
               <div className="h-1 w-1 bg-gray-600 rounded-full"></div>
             </button>
           </div>
-          <div>
-            {/* INSERT GRAPH HERE */}
+          <div className="w-full">
+            {/* TABS */}
+            <div className="flex flex-col gap-4">
+              <Tabs activeTab={activeTab} onTabClick={setActiveTab} tabs={tabContent} />
+              <TabContent content={tabContent[activeTab].content} />
+            </div>
           </div>
         </div>
 
-        {/* Discounted Product Sales */}
+        {/* Discounted Product Sales Card */}
         <div className="rounded-lg shadow-sm flex flex-col py-4 px-7 border-slate-100 border">
           {/* Heading */}
           <div className="flex justify-between items-center mb-12">
@@ -118,7 +127,8 @@ export default function Dashboard() {
 
       {/* Second Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5 w-full">
-        {/* Advertisment */}
+
+        {/* Advertisment Card */}
         <div className="rounded-lg shadow-sm flex flex-col justify-center items-center py-4 px-7 border-slate-100 border col-span-2 lg:col-span-1">
           <h1 className="text-center text-2xl text-gray-800">Have you tried the new <span className="font-bold">Mobile Application ?</span></h1>
           <img className="py-10" src="https://preview.keenthemes.com/metronic8/demo1/assets/media/svg/illustrations/easy/1.svg" alt="alt photo for a girl holding a phone" />
@@ -129,7 +139,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Product Orders */}
+        {/* Product Orders Card */}
         <div className="rounded-lg shadow-sm flex flex-col py-4 px-7 border-slate-100 border col-span-2 lg:col-span-2">
           <div className="flex justify-between items-start flex-col md:flex-row ">
             <div className="flex flex-col text-justify">
@@ -179,7 +189,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Sales  */}
+        {/* Sales Card */}
         <div className="rounded-lg shadow-sm flex flex-col py-4 px-7 border-slate-100 border col-span-2 lg:col-span-1">
           <div className="flex flex-col">
             <div className="flex justify-between items-center flex-row">
@@ -211,7 +221,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Stock Report */}
+        {/* Stock Report Card */}
         <div className="rounded-lg shadow-sm flex flex-col py-4 px-7 border-slate-100 border col-span-2 lg:col-span-2">
           <div className="flex justify-between items-start flex-col md:flex-row ">
             <div className="flex flex-col text-justify">

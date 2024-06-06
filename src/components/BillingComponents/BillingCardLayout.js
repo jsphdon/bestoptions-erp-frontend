@@ -1,4 +1,4 @@
-const BillingCardLayout = ({ cardName, isPrimary, cardProcessorImg, cardNumber, cardExpiry }) => {
+const BillingCardLayout = ({ cardName, isPrimary, cardProcessorImg, cardNumber, cardExpiry, editButton, deleteButton }) => {
   return (
     <div className="border border-dashed rounded-xl flex flex-col md:flex-row gap-8 md:gap-0 justify-between p-6 items-center">
       {/* Card Name its Mini Details */}
@@ -32,8 +32,8 @@ const BillingCardLayout = ({ cardName, isPrimary, cardProcessorImg, cardNumber, 
       </div>
       {/* Card Buttons Delete and Edit */}
       <div className="flex space-x-3 h-fit">
-        <button className="rounded-md py-2 px-3 hover:bg-red-400 bg-red-200 text-center text-sm font-semibold">Delete</button>
-        <button className="rounded-md py-2 px-3 hover:bg-gray-300 bg-gray-100 text-center text-sm font-semibold">Edit</button>
+        {deleteButton}
+        {editButton}
       </div>
     </div>
   )

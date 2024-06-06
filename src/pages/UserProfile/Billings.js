@@ -27,6 +27,22 @@ export default function Billings() {
   const handleOpenModalAddAddress = () => setOpenModalAddAddress(true);
   const handleCloseModalAddAddress = () => setOpenModalAddAddress(false);
 
+  const deleteCardButton = (
+    <button className="rounded-md py-2 px-3 hover:bg-red-400 bg-red-200 text-center text-sm font-semibold">Delete</button>
+  );
+
+  const editCardButton = (
+    <button className="rounded-md py-2 px-3 hover:bg-gray-300 bg-gray-100 text-center text-sm font-semibold" onClick={handleOpenModalAddCard}>Edit</button>
+  );
+
+  const deleteAddressButton = (
+    <button className="rounded-md py-2 px-3 hover:bg-red-400 bg-red-200 text-center text-sm font-semibold">Delete</button>
+  );
+
+  const editAddressButton = (
+    <button className="rounded-md py-2 px-3 hover:bg-gray-300 bg-gray-100 text-center text-sm font-semibold" onClick={handleOpenModalAddAddress}>Edit</button>
+  );
+
   return (
     <Layout>
       <Usercard />
@@ -43,7 +59,7 @@ export default function Billings() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
               {/* Billing Card Layout Component (Card Details) */}
-              <BillingCardLayout cardName="Marcus Morris" isPrimary={true} cardProcessorImg="https://preview.keenthemes.com/metronic8/demo1/assets/media/svg/card-logos/visa.svg" cardNumber="Visa **** 1679" cardExpiry="09/24" />
+              <BillingCardLayout cardName="Marcus Morris" isPrimary={true} cardProcessorImg="https://preview.keenthemes.com/metronic8/demo1/assets/media/svg/card-logos/visa.svg" cardNumber="Visa **** 1679" cardExpiry="09/24" deleteButton={deleteCardButton} editButton={editCardButton} />
 
               {/* Add Card */}
               <div className="border border-dashed rounded-xl flex flex-col md:flex-row justify-between gap-2 md:gap-0 p-6 items-center border-blue-700 bg-blue-100">
@@ -74,7 +90,7 @@ export default function Billings() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
               {/* Sample Address */}
-              <BillingAddressCardLayout addressNumber={1} isPrimary={true} aptBlockAvenue="Ap #285-7193 Ullamcorper Avenue" cityState="Amesbury HI 93373" country="US" />
+              <BillingAddressCardLayout addressNumber={1} isPrimary={true} aptBlockAvenue="Ap #285-7193 Ullamcorper Avenue" cityState="Amesbury HI 93373" country="US" deleteAddressButton={deleteAddressButton} editAddressButton={editAddressButton} />
 
               {/* Add Address */}
               <div className="border border-dashed rounded-xl flex flex-col md:flex-row gap-2 md:gap-0 justify-between p-6 items-center border-blue-700 bg-blue-100 ">
