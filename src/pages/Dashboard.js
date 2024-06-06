@@ -5,6 +5,7 @@ import { dashboardDataFirst, data, transactStatus, categories, tabContent } from
 import CustomDropdown from '../components/CustomDropdown';
 import Tabs from "../components/Tabs";
 import TabContent from "../components/TabContent";
+import LineChart from "../sampleData/LineChart";
 
 
 export default function Dashboard() {
@@ -71,6 +72,7 @@ export default function Dashboard() {
 
           <div>
             {/* INSERT GRAPH HERE */}
+            <LineChart />
           </div>
         </div>
 
@@ -120,6 +122,7 @@ export default function Dashboard() {
 
           <div>
             {/* INSERT GRAPH HERE */}
+            <LineChart />
           </div>
         </div>
 
