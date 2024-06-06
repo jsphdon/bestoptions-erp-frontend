@@ -56,7 +56,7 @@ export default function Billings() {
           {/* Card section */}
           <div className="p-7">
             <h1 className="text-xl font-bold mb-4">My Cards</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
 
               {/* Billing Card Layout Component (Card Details) */}
               <BillingCardLayout cardName="Marcus Morris" isPrimary={true} cardProcessorImg="https://preview.keenthemes.com/metronic8/demo1/assets/media/svg/card-logos/visa.svg" cardNumber="Visa **** 1679" cardExpiry="09/24" deleteButton={deleteCardButton} editButton={editCardButton} />
@@ -87,7 +87,7 @@ export default function Billings() {
           </div>
           {/* Address section */}
           <div className="p-7">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
 
               {/* Sample Address */}
               <BillingAddressCardLayout addressNumber={1} isPrimary={true} aptBlockAvenue="Ap #285-7193 Ullamcorper Avenue" cityState="Amesbury HI 93373" country="US" deleteAddressButton={deleteAddressButton} editAddressButton={editAddressButton} />

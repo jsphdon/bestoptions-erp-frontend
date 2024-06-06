@@ -1,5 +1,6 @@
 import { dashboardDataFirst } from '../../sampleData/sampleData'
 
+// Change the name of the component according to the tabs indicated on Dashboard.js
 const TabOneContent = () => {
   return (
     <table className="w-full border-collapse">

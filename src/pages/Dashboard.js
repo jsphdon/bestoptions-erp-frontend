@@ -91,7 +91,9 @@ export default function Dashboard() {
           <div className="w-full">
             {/* TABS */}
             <div className="flex flex-col gap-4">
+              {/* tabContent or the Tab Names are in simpleData.js */}
               <Tabs activeTab={activeTab} onTabClick={setActiveTab} tabs={tabContent} />
+              {/* TabContents are in components folder */}
               <TabContent content={tabContent[activeTab].content} />
             </div>
           </div>
