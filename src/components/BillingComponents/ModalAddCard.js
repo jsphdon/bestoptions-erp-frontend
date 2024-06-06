@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Switch from '@mui/material/Switch';
 import CustomDropdown from '../CustomDropdown';
 import { months, years } from '../../sampleData/sampleData';
+import BtnSecondary from '../BtnSecondary';
+import BtnPrimary from '../BtnPrimary';
 
 function ModalAddCard({ handleClose }) {
 
@@ -107,10 +109,12 @@ function ModalAddCard({ handleClose }) {
           </div>
         </form>
 
-        {/* Buttons */}
+        {/* Action Buttons */}
         <div className='mt-14 flex justify-center items-center gap-2 sticky bottom-0 z-10'>
-          <button className="rounded-md py-3 px-5 hover:bg-gray-300 bg-gray-100 text-gray-600 text-center font-bold" onClick={handleClose}>Discard</button>
-          <button className="rounded-md py-3 px-5 hover:bg-blue-700 bg-blue-600 text-white text-center mx-2 md:mx-1 font-bold">Submit</button>
+          {/* Discard Button */}
+          <BtnSecondary className="py-3 px-5 font-bold" onClick={handleClose} label="Discard" />
+          {/* Submit Button */}
+          <BtnPrimary className="py-3 px-5 font-bold" label="Submit" />
         </div>
       </div>
     </div>

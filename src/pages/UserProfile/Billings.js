@@ -11,6 +11,8 @@ import ModalAddCard from '../../components/BillingComponents/ModalAddCard';
 import ModalAddAddress from '../../components/BillingComponents/ModalAddAddress';
 import { Link } from 'react-router-dom';
 import { monthData, yearData, allTimeData } from '../../sampleData/sampleData';
+import BtnSecondary from '../../components/BtnSecondary';
+import BtnPrimary from '../../components/BtnPrimary';
 
 export default function Billings() {
 
@@ -28,19 +30,19 @@ export default function Billings() {
   const handleCloseModalAddAddress = () => setOpenModalAddAddress(false);
 
   const deleteCardButton = (
-    <button className="rounded-md py-2 px-3 hover:bg-red-400 bg-red-200 text-center text-sm font-semibold">Delete</button>
+    <BtnSecondary className="font-semibold hover:bg-red-400 bg-red-200" label="Delete" />
   );
 
   const editCardButton = (
-    <button className="rounded-md py-2 px-3 hover:bg-gray-300 bg-gray-100 text-center text-sm font-semibold" onClick={handleOpenModalAddCard}>Edit</button>
+    <BtnSecondary className="font-semibold " onClick={handleOpenModalAddCard} label="Edit" />
   );
 
   const deleteAddressButton = (
-    <button className="rounded-md py-2 px-3 hover:bg-red-400 bg-red-200 text-center text-sm font-semibold">Delete</button>
+    <BtnSecondary className="font-semibold hover:bg-red-400 bg-red-200" label="Delete" />
   );
 
   const editAddressButton = (
-    <button className="rounded-md py-2 px-3 hover:bg-gray-300 bg-gray-100 text-center text-sm font-semibold" onClick={handleOpenModalAddAddress}>Edit</button>
+    <BtnSecondary className="font-semibold " onClick={handleOpenModalAddAddress} label="Edit" />
   );
 
   return (
@@ -70,7 +72,7 @@ export default function Billings() {
                 </div>
                 {/* Add Card button */}
                 <div className="flex h-fit">
-                  <button className="rounded-lg py-2 px-5 hover:bg-blue-600 bg-blue-500 text-center text-md text-white font-white font-bold w-[139px] " onClick={handleOpenModalAddCard}>Add Card</button>
+                  <BtnPrimary className="rounded-lg py-2 px-5 hover:bg-blue-600 bg-blue-500 text-lg font-bold w-[139px]" label="Add Card" onClick={handleOpenModalAddCard} />
                 </div>
               </div>
             </div>
@@ -101,7 +103,7 @@ export default function Billings() {
                 </div>
                 {/* Add Address Button */}
                 <div className="flex h-fit">
-                  <button className="rounded-lg py-2 px-4 hover:bg-blue-600 bg-blue-500 text-center text-md text-white font-white font-bold w-[139px]" onClick={handleOpenModalAddAddress}>New Address</button>
+                  <BtnPrimary className="rounded-lg py-2 px-5 hover:bg-blue-600 bg-blue-500 text-lg font-bold w-[139px]" label="Add Address" onClick={handleOpenModalAddAddress} />
                 </div>
               </div>
             </div>

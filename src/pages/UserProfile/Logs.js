@@ -3,6 +3,7 @@ import CustomDropdown from "../../components/CustomDropdown";
 import Layout from "../../components/Layout";
 import Usercard from "../../components/UserCard";
 import { logsData, hours } from "../../sampleData/sampleData";
+import BtnPrimary from '../../components/BtnPrimary';
 
 export default function Logs() {
 
@@ -24,7 +25,7 @@ export default function Logs() {
               {/* Hourly Data */}
               <CustomDropdown value={hour} onChange={handleHourChange} options={hours} placeholder="Select.." />
               {/* View All Button */}
-              <button className="rounded-md py-3 px-4 hover:bg-blue-700 bg-blue-600 text-white text-center mx-1 font-bold min-w-24">View All</button>
+              <BtnPrimary className="min-w-24 font-bold py-4 px-4" label="View All" />
             </div>
           </div>
           {/* Table */}

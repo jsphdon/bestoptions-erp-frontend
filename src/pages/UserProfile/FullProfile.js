@@ -7,6 +7,8 @@ import CustomDropdown from '../../components/CustomDropdown';
 import Layout from '../../components/Layout';
 import Usercard from '../../components/UserCard';
 import { countries, timezones, currencies, languages } from '../../sampleData/sampleData';
+import BtnPrimary from '../../components/BtnPrimary';
+import BtnSecondary from '../../components/BtnSecondary';
 
 export default function FullProfile() {
 
@@ -52,7 +54,7 @@ export default function FullProfile() {
           <div className="border-b p-7 py-5 flex flex-col md:flex-row justify-between items-center">
             <h1 className="text-xl font-bold">Profile Details</h1>
             {/* Edit Profile Button */}
-            <button onClick={() => setIsEditMode(!isEditMode)} className={`rounded-md py-2 px-4  text-white text-center mx-2 md:mx-1 font-bold ${isEditMode ? 'hover:bg-red-700 bg-red-600' : 'hover:bg-blue-700 bg-blue-600'}`}>{isEditMode ? 'Cancel' : 'Enable Edit'}</button>
+            <BtnPrimary className={`font-bold ${isEditMode ? 'hover:bg-red-700 bg-red-600' : 'hover:bg-blue-700 bg-blue-600'}`} onClick={() => setIsEditMode(!isEditMode)} label={isEditMode ? 'Cancel' : 'Enable Edit'} />
           </div>
           {/* Details */}
           <div className="p-7">
@@ -169,18 +171,16 @@ export default function FullProfile() {
 
           {/* Save Changes */}
           <div className="border-t p-7 flex space-x-2 justify-end">
-            <button
+            {/* Discard Button */}
+            <BtnSecondary className={`font-bold ${!isEditMode && 'disabled:opacity-50 cursor-not-allowed'}`} label="Discard" disabled={!isEditMode} />
+            {/* <button
               className={`rounded-md py-4 px-5 hover:bg-gray-300 bg-gray-100 text-gray-600 text-center font-bold ${!isEditMode && 'disabled:opacity-50 cursor-not-allowed'}`}
               disabled={!isEditMode}
             >
               Discard
-            </button>
-            <button
-              className={`rounded-md py-4 px-5 hover:bg-blue-700 bg-blue-600 text-white text-center mx-2 md:mx-1 font-bold ${!isEditMode && 'disabled:opacity-50 cursor-not-allowed'}`}
-              disabled={!isEditMode}
-            >
-              Save Changes
-            </button>
+            </button> */}
+            {/* Save Changes Button */}
+            <BtnPrimary label="Save Changes" disabled={!isEditMode} className={`font-bold ${!isEditMode && 'disabled:opacity-50 cursor-not-allowed'}`} />
           </div>
 
         </div>
@@ -201,7 +201,8 @@ export default function FullProfile() {
                   <p className='font-semibold text-md'>Email Address</p>
                   <p className='font-semibold text-sm text-gray-400 '>support@keenthemes.com</p>
                 </div>
-                <button className="rounded-md py-2 px-4 hover:bg-gray-300 bg-gray-100 text-gray-600 text-center font-bold">Change Email</button>
+                {/* Change Email Button */}
+                <BtnSecondary className="font-bold text-lg" label="Change Email" />
               </div>
             </div>
             <div className='pt-6'>
@@ -210,7 +211,8 @@ export default function FullProfile() {
                   <p className='font-semibold text-md'>Password</p>
                   <p className='font-semibold text-sm text-gray-400'>********</p>
                 </div>
-                <button className="rounded-md py-2 px-4 hover:bg-gray-300 bg-gray-100 text-gray-600 text-center font-bold">Reset Password</button>
+                {/* Reset Password Button */}
+                <BtnSecondary className="font-bold text-lg" label="Reset Password" />
               </div>
             </div>
           </div>

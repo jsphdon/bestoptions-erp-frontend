@@ -3,6 +3,7 @@ import Layout from "../../components/Layout";
 import Usercard from "../../components/UserCard";
 import CustomDropdown from '../../components/CustomDropdown';
 import { data, transactStatus, categories } from '../../sampleData/sampleData';
+import BtnSecondary from '../../components/BtnSecondary';
 
 export default function Overview() {
 
@@ -127,7 +128,8 @@ export default function Overview() {
                 <h1 className="font-bold text-lg">Latest Items</h1>
                 <p className="text-gray-400 font-medium text-sm">342 Items Sold Last Month</p>
               </div>
-              <button className="rounded-md py-2 px-3 hover:bg-gray-300 bg-gray-100 text-center text-sm font-semibold">View More</button>
+              {/* View More Button */}
+              <BtnSecondary label="View More" className="font-semibold" />
             </div>
             <div className="flex justify-center mt-8">
               <table className="min-w-full overflow-x-auto">
@@ -167,7 +169,7 @@ export default function Overview() {
                 <h1 className='py-2 px-0 pr-3 md:px-3 text-gray-600 font-medium text-sm'>Status</h1>
                 <CustomDropdown name="status" value={status} onChange={handleChange} options={transactStatus} placeholder="Select" />
               </div>
-              <button className="rounded-md py-2 px-3 hover:bg-gray-300 bg-gray-100 text-center text-sm font-semibold mt-1 md:mt-0">View All</button>
+              <BtnSecondary label="View All" />
             </div>
           </div>
           {/* Table */}
