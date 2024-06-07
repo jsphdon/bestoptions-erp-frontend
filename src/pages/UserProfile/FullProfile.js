@@ -46,7 +46,7 @@ export default function FullProfile() {
       default:
       // Default case
     }
-  })
+  }, [])
 
 
   return (

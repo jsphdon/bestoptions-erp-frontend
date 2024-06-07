@@ -11,7 +11,7 @@ export default function Logs() {
 
   const handleHourChange = useCallback((event) => {
     setHour(event.target.value);
-  });
+  }, []);
 
   return (
     <Layout>
