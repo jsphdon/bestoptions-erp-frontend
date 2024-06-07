@@ -138,3 +138,20 @@ export const tabContent = [
   { title: <div className="text-center font-semibold">VISA<br />90 Days</div>, content: <TabThreeContent />, className: "tabs" }
 
 ];
+
+export const transactionData = [
+  { transcId: '#XGY-351', product: 'A2a', paymentProc: 'Wallet', date: '2024-07-06 05:00:00', desc: 'A2A Booking Payment', debit: 'AED', credit: '0.00', direct: '0.00', closingBal: '0.00', dueAmt: '3000.00', remark: 'A2A Booking Payment' },
+  { transcId: '#XGY-351', product: 'A2a', paymentProc: 'Wallet', date: '2024-07-06 05:00:00', desc: 'A2A Booking Payment', debit: 'AED', credit: '0.00', direct: '0.00', closingBal: '0.00', dueAmt: '3000.00', remark: 'A2A Booking Payment' },
+  { transcId: '#XGY-351', product: 'A2a', paymentProc: 'Wallet', date: '2024-07-06 05:00:00', desc: 'A2A Booking Payment', debit: 'AED', credit: '0.00', direct: '0.00', closingBal: '0.00', dueAmt: '3000.00', remark: 'A2A Booking Payment' },
+  { transcId: '#XGY-351', product: 'A2a', paymentProc: 'Wallet', date: '2024-07-06 05:00:00', desc: 'A2A Booking Payment', debit: 'AED', credit: '0.00', direct: '0.00', closingBal: '0.00', dueAmt: '3000.00', remark: 'A2A Booking Payment' },
+  { transcId: '#XGY-351', product: 'A2a', paymentProc: 'Wallet', date: '2024-07-06 05:00:00', desc: 'A2A Booking Payment', debit: 'AED', credit: '0.00', direct: '0.00', closingBal: '0.00', dueAmt: '3000.00', remark: 'A2A Booking Payment' },
+  { transcId: '#XGY-351', product: 'A2a', paymentProc: 'Wallet', date: '2024-07-06 05:00:00', desc: 'A2A Booking Payment', debit: 'AED', credit: '0.00', direct: '0.00', closingBal: '0.00', dueAmt: '3000.00', remark: 'A2A Booking Payment' },
+]
+
+export const depositData = [
+  { transcId: '#XGY-351', deposited: 'A2a', credited: '0.00', fee: '10,000', paymentProc: 'Cash-in-Hand', date: '2024-07-06 05:00:00', status: 'Success' }
+]
+
+export const reportData = [
+  { refId: 'B2BA2A_17177412312312', pnr: 'HX022I', a2a: 'DXB - SLL - DXB', passengers: 'Mr. Faruku SSebunya', date: 'June 07, 2024', price: '805' }
+]

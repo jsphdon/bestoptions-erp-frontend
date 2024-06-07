@@ -1,12 +1,15 @@
 import React, { useCallback, useState } from "react";
-import Layout from '../components/Layout';
-import SummaryCard from '../components/DashboardComponents/SummaryCard';
-import { dashboardDataFirst, data, transactStatus, categories, tabContent } from '../sampleData/sampleData';
-import CustomDropdown from '../components/CustomDropdown';
-import MoreButton from '../components/MoreButton';
-import Tabs from "../components/Tabs";
-import TabContent from "../components/TabContent";
-import LineChart from "../sampleData/LineChart";
+
+import SummaryCard from '../../components/DashboardComponents/SummaryCard';
+import { dashboardDataFirst, data, transactStatus, categories, tabContent } from '../../sampleData/sampleData';
+import CustomDropdown from '../../components/CustomDropdown';
+import MoreButton from '../../components/MoreButton';
+import Tabs from '../../components/Tabs';
+import TabContent from '../../components/TabContent';
+import LineChart from '../../sampleData/LineChart';
+import DashboardCard from '../../components/DashboardCard';
+import Layout from "../../components/Layout";
+
 
 
 export default function Dashboard() {
@@ -33,6 +36,7 @@ export default function Dashboard() {
 
   return (
     <Layout>
+      <DashboardCard />
       {/* First Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full">
 
