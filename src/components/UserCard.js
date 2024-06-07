@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import BtnSecondary from './BtnSecondary';
-import BtnPrimary from './BtnPrimary';
 
 
 export default function Usercard() {
