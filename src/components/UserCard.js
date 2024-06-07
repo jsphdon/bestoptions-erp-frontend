@@ -56,7 +56,7 @@ export default function Usercard() {
                 {/* Edit Profile Button */}
                 <Link to="/full-profile" className="rounded-md py-2 px-4 hover:bg-blue-700 bg-blue-600 text-white text-center mx-2 md:mx-1 font-bold">Edit Profile</Link>
                 {/* More Button */}
-                <MoreButton />
+                <MoreButton className="h-full px-3" />
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between w-full mt-1 md:mt-5">

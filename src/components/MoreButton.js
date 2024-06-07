@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
-import { Menu, MenuItem, Button } from '@mui/material';
+import { Menu, MenuItem } from '@mui/material';
 
-const MoreButton = () => {
+const MoreButton = ({ className }) => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = useCallback((event) => {
@@ -18,7 +18,7 @@ const MoreButton = () => {
         aria-controls="simple-menu"
         aria-haspopup="true"
         onClick={handleClick}
-        className="flex space-x-1 justify-center items-center rounded-md py-3 px-2 hover:bg-gray-300 bg-gray-100 text-gray-600 text-center font-bold"
+        className={`flex space-x-1 justify-center items-center rounded-md py-3 px-2 hover:bg-gray-300 bg-gray-100 text-gray-600 text-center font-bold ${className}`}
       >
         <div className="h-1 w-1 bg-gray-600 rounded-full"></div>
         <div className="h-1 w-1 bg-gray-600 rounded-full"></div>
