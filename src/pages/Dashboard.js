@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import SummaryCard from '../components/DashboardComponents/SummaryCard';
 import { dashboardDataFirst, data, transactStatus, categories, tabContent } from '../sampleData/sampleData';
 import CustomDropdown from '../components/CustomDropdown';
+import MoreButton from '../components/MoreButton';
 import Tabs from "../components/Tabs";
 import TabContent from "../components/TabContent";
 import LineChart from "../sampleData/LineChart";
@@ -56,11 +57,7 @@ export default function Dashboard() {
               <p className="text-sm text-gray-400 font-semibold">Users from all channels</p>
             </div>
             {/* More Button */}
-            <button className="flex space-x-1 justify-center items-center rounded-md py-3 px-2 hover:bg-gray-300 bg-gray-100 text-gray-600 text-center font-bold">
-              <div className="h-1 w-1 bg-gray-600 rounded-full"></div>
-              <div className="h-1 w-1 bg-gray-600 rounded-full"></div>
-              <div className="h-1 w-1 bg-gray-600 rounded-full"></div>
-            </button>
+            <MoreButton />
           </div>
           {/* Current Number */}
           <div className="flex flex-col gap-1">
@@ -82,11 +79,7 @@ export default function Dashboard() {
           <div className="flex justify-between items-center mb-6">
             <h1 className="text-lg font-semibold">Recent Orders</h1>
             {/* More Button */}
-            <button className="flex space-x-1 justify-center items-center rounded-md py-3 px-2 hover:bg-gray-300 bg-gray-100 text-gray-600 text-center font-bold">
-              <div className="h-1 w-1 bg-gray-600 rounded-full"></div>
-              <div className="h-1 w-1 bg-gray-600 rounded-full"></div>
-              <div className="h-1 w-1 bg-gray-600 rounded-full"></div>
-            </button>
+            <MoreButton />
           </div>
           <div className="w-full">
             {/* TABS */}
@@ -108,11 +101,7 @@ export default function Dashboard() {
               <p className="text-sm text-gray-400 font-semibold">Users from all channels</p>
             </div>
             {/* More Button */}
-            <button className="flex space-x-1 justify-center items-center rounded-md py-3 px-2 hover:bg-gray-300 bg-gray-100 text-gray-600 text-center font-bold">
-              <div className="h-1 w-1 bg-gray-600 rounded-full"></div>
-              <div className="h-1 w-1 bg-gray-600 rounded-full"></div>
-              <div className="h-1 w-1 bg-gray-600 rounded-full"></div>
-            </button>
+            <MoreButton />
           </div>
           {/* Current Number */}
           <div className="flex flex-col gap-1">
