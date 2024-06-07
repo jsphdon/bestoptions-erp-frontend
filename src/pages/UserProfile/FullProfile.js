@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
@@ -21,7 +21,12 @@ export default function FullProfile() {
 
   const [isEditMode, setIsEditMode] = useState(false); // Add state for edit mode
 
-  const handleChange = (event) => {
+  // Handles the behavior of enabling edit mode.
+  const handleEditMode = useCallback(() => {
+    setIsEditMode((prevMode) => !prevMode);
+  }, []);
+
+  const handleChange = useCallback((event) => {
     const { name, value } = event.target;
 
     // Handle changes based on the name of the input/select element
@@ -41,7 +46,7 @@ export default function FullProfile() {
       default:
       // Default case
     }
-  };
+  })
 
 
   return (
@@ -54,7 +59,7 @@ export default function FullProfile() {
           <div className="border-b p-7 py-5 flex flex-col md:flex-row justify-between items-center">
             <h1 className="text-xl font-bold">Profile Details</h1>
             {/* Edit Profile Button */}
-            <BtnPrimary className={`font-bold ${isEditMode ? 'hover:bg-red-700 bg-red-600' : 'hover:bg-blue-700 bg-blue-600'}`} onClick={() => setIsEditMode(!isEditMode)} label={isEditMode ? 'Cancel' : 'Enable Edit'} />
+            <BtnPrimary className={`font-bold ${isEditMode ? 'hover:bg-red-700 bg-red-600' : 'hover:bg-blue-700 bg-blue-600'}`} onClick={handleEditMode} label={isEditMode ? 'Cancel' : 'Enable Edit'} />
           </div>
           {/* Details */}
           <div className="p-7">

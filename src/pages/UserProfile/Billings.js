@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Modal } from '@mui/material';
 import AllTimeTableComponent from "../../components/BillingComponents/AllTimeTableComponent";
 import MonthTableComponent from "../../components/BillingComponents/MonthTableComponent";
@@ -22,25 +22,29 @@ export default function Billings() {
   const [openModalAddAddress, setOpenModalAddAddress] = useState(false);
 
   // Handle the opening and closing of Add Card Modal
-  const handleOpenModalAddCard = () => setOpenModalAddCard(true);
-  const handleCloseModalAddCard = () => setOpenModalAddCard(false);
+  const handleOpenModalAddCard = useCallback(() => setOpenModalAddCard(true));
+  const handleCloseModalAddCard = useCallback(() => setOpenModalAddCard(false));
 
   // Handle the opening and closing of Add Address Modal
-  const handleOpenModalAddAddress = () => setOpenModalAddAddress(true);
-  const handleCloseModalAddAddress = () => setOpenModalAddAddress(false);
+  const handleOpenModalAddAddress = useCallback(() => setOpenModalAddAddress(true));
+  const handleCloseModalAddAddress = useCallback(() => setOpenModalAddAddress(false));
 
+  // Delete Card Button
   const deleteCardButton = (
     <BtnSecondary className="font-semibold hover:bg-red-400 bg-red-200" label="Delete" />
   );
 
+  // Edit Card Button
   const editCardButton = (
     <BtnSecondary className="font-semibold " onClick={handleOpenModalAddCard} label="Edit" />
   );
 
+  // Delete Address Button
   const deleteAddressButton = (
     <BtnSecondary className="font-semibold hover:bg-red-400 bg-red-200" label="Delete" />
   );
 
+  // Edit Address Button
   const editAddressButton = (
     <BtnSecondary className="font-semibold " onClick={handleOpenModalAddAddress} label="Edit" />
   );

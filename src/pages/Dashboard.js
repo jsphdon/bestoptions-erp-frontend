@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Layout from '../components/Layout';
 import SummaryCard from '../components/DashboardComponents/SummaryCard';
 import { dashboardDataFirst, data, transactStatus, categories, tabContent } from '../sampleData/sampleData';
@@ -14,7 +14,7 @@ export default function Dashboard() {
   const [category, setCategory] = useState('');
   const [activeTab, setActiveTab] = useState(0);
 
-  const handleChange = (event) => {
+  const handleChange = useCallback((event) => {
     const { name, value } = event.target;
 
     // Handle changes based on the name of the input/select element
@@ -28,7 +28,7 @@ export default function Dashboard() {
       default:
       // Default case
     }
-  };
+  })
 
   return (
     <Layout>
@@ -178,8 +178,8 @@ export default function Dashboard() {
                   </tr>
                 </thead>
                 <tbody>
-                  {dashboardDataFirst.map((row, index) => (
-                    <tr key={index}>
+                  {dashboardDataFirst.map((row) => (
+                    <tr key={row.id}>
                       <td className="px-4 py-2 text-black font-semibold text-left border-b border-dashed text-sm">{row.id}</td>
                       <td className="px-4 py-2 text-gray-500 font-semibold text-center border-b border-dashed text-sm">{row.created}</td>
                       <td className="px-4 py-2 text-gray-500 font-semibold text-center border-b border-dashed text-sm">{row.customer}</td>
@@ -213,8 +213,8 @@ export default function Dashboard() {
                   </tr>
                 </thead>
                 <tbody>
-                  {data.map((row, index) => (
-                    <tr key={index}>
+                  {data.map((row) => (
+                    <tr key={row.id}>
                       <td className="px-4 py-2 text-black font-bold text-left border-b border-dashed">{row.dateAdded}</td>
                       {/* <td className="px-4 py-2 text-gray-500 font-bold text-center border-b border-dashed">{row.productId}</td> */}
                       <td className="px-4 py-2 text-gray-500 font-bold text-center border-b border-dashed">60 days VISA</td>
@@ -259,8 +259,8 @@ export default function Dashboard() {
                   </tr>
                 </thead>
                 <tbody>
-                  {data.map((row, index) => (
-                    <tr key={index}>
+                  {data.map((row) => (
+                    <tr key={row.id}>
                       <td className="px-4 py-2 text-gray-500 font-semibold text-left border-b border-dashed text-sm ">{row.dateAdded}</td>
                       <td className="px-4 py-2 text-black font-semibold text-left border-b border-dashed text-sm ">{row.item}</td>
                       <td className="px-4 py-2 text-gray-500 font-semibold text-center border-b border-dashed text-sm ">{row.productId}</td>

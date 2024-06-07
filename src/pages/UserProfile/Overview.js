@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import Layout from "../../components/Layout";
 import Usercard from "../../components/UserCard";
 import CustomDropdown from '../../components/CustomDropdown';
@@ -10,7 +10,7 @@ export default function Overview() {
   const [status, setStatus] = useState('');
   const [category, setCategory] = useState('');
 
-  const handleChange = (event) => {
+  const handleChange = useCallback((event) => {
     const { name, value } = event.target;
 
     // Handle changes based on the name of the input/select element
@@ -24,7 +24,7 @@ export default function Overview() {
       default:
       // Default case
     }
-  };
+  })
 
   return (
     <Layout>
@@ -140,8 +140,8 @@ export default function Overview() {
                   </tr>
                 </thead>
                 <tbody>
-                  {data.map((row, index) => (
-                    <tr key={index}>
+                  {data.map((row) => (
+                    <tr key={row.id}>
                       <td className="px-4 py-2 text-black font-bold text-left border-b border-dashed">{row.dateAdded}</td>
                       {/* <td className="px-4 py-2 text-gray-500 font-bold text-center border-b border-dashed">{row.productId}</td> */}
                       <td className="px-4 py-2 text-gray-500 font-bold text-center border-b border-dashed">60 days VISA</td>
@@ -186,8 +186,8 @@ export default function Overview() {
                   </tr>
                 </thead>
                 <tbody>
-                  {data.map((row, index) => (
-                    <tr key={index}>
+                  {data.map((row) => (
+                    <tr key={row.id}>
                       <td className="px-4 py-2 text-gray-500 font-bold text-left border-b border-dashed">{row.dateAdded}</td>
                       <td className="px-4 py-2 text-black font-bold text-left border-b border-dashed">{row.item}</td>
                       <td className="px-4 py-2 text-gray-500 font-bold text-center border-b border-dashed">{row.productId}</td>

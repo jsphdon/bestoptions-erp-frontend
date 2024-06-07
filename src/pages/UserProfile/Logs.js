@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import CustomDropdown from "../../components/CustomDropdown";
 import Layout from "../../components/Layout";
 import Usercard from "../../components/UserCard";
@@ -9,9 +9,10 @@ export default function Logs() {
 
   const [hour, setHour] = useState('');
 
-  const handleHourChange = (event) => {
+  const handleHourChange = useCallback((event) => {
     setHour(event.target.value);
-  };
+  });
+
   return (
     <Layout>
       <Usercard />
@@ -43,7 +44,7 @@ export default function Logs() {
                 </thead>
                 <tbody>
                   {logsData.map((row, index) => (
-                    <tr key={index}>
+                    <tr key={row.id}>
                       <td className="px-4 py-2 text-gray-700 text-left border-t min-w-[250px]">{row.location}</td>
                       <td className="px-4 py-2 text-gray-700 text-left border-t min-w-[100px]">{row.status}</td>
                       <td className="px-4 py-2 text-gray-700 text-left border-t min-w-[150px]">{row.device}</td>

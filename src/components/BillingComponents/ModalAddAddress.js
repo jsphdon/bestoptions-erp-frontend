@@ -1,5 +1,5 @@
 // ModalAddAddress.js
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import Switch from '@mui/material/Switch';
 import CustomDropdown from '../CustomDropdown';
 import { countries } from '../../sampleData/sampleData';
@@ -11,9 +11,9 @@ function ModalAddAddress({ handleClose }) {
 
   const [country, setCountry] = useState('');
 
-  const handleCountryChange = (event) => {
+  const handleCountryChange = useCallback((event) => {
     setCountry(event.target.value);
-  };
+  })
 
   return (
     <div className='flex flex-col bg-white rounded-xl w-full max-w-2xl mx-auto'>

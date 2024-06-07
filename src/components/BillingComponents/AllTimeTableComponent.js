@@ -2,8 +2,8 @@
 const AllTimeTableComponent = ({ data }) => {
   return (
     <>
-      {data.map((row, index) => (
-        <tr key={index}>
+      {data.map((row) => (
+        <tr key={row.id}>
           <td className="min-w-[150px] pl-7 px-4 py-5 text-gray-500 text-left border-b">{row.date}</td>
           <td className="min-w-[250px] px-4 py-5 text-gray-500 text-left border-b">{row.description}</td>
           <td className="min-w-[150px] px-4 py-5 text-gray-500 text-center border-b">{row.amount}</td>

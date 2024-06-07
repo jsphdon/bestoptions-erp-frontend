@@ -1,5 +1,5 @@
 // ModalAddCard.js
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import Switch from '@mui/material/Switch';
 import CustomDropdown from '../CustomDropdown';
 import { months, years } from '../../sampleData/sampleData';
@@ -14,13 +14,13 @@ function ModalAddCard({ handleClose }) {
   const [month, setMonth] = useState('');
   const [year, setYear] = useState('');
 
-  const handleMonthChange = (event) => {
+  const handleMonthChange = useCallback((event) => {
     setMonth(event.target.value);
-  };
+  })
 
-  const handleYearChange = (event) => {
+  const handleYearChange = useCallback((event) => {
     setYear(event.target.value);
-  };
+  })
 
   return (
     <div className='flex flex-col bg-white rounded-xl w-full max-w-2xl mx-auto'>

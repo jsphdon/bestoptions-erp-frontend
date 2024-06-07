@@ -14,8 +14,8 @@ const TabOneContent = () => {
         </tr>
       </thead>
       <tbody>
-        {dashboardDataFirst.map((row, index) => (
-          <tr key={index}>
+        {dashboardDataFirst.map((row) => (
+          <tr key={row.id}>
             <td className="px-4 py-2 text-black font-semibold text-left border-b border-dashed text-sm">{row.id}</td>
             <td className="px-4 py-2 text-gray-500 font-semibold text-center border-b border-dashed text-sm">{row.customer}</td>
             <td className="px-4 py-2 text-gray-500 font-semibold text-center border-b border-dashed text-sm">{row.total}</td>
